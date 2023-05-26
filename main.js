@@ -34,7 +34,7 @@ function arraysEqual(a, b) {
 }
 function checkSymptom(listSymptom) {
   if (listSymptom.length < 5) {
-    return "Kamu tidak mengalami gejala sakit kepala";
+    return "Kamu  mengalami gejala sakit kepala namun belum bisa ditentukan ";
   }
 
   const hasMigrain = listSymptom.filter(symptom => MigrainSymptom.includes(symptom)).length === 5;

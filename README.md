@@ -2,10 +2,10 @@
 Sistem Pakar untuk mendiagnosis penyakit sakit kepala
 sistem pakar yang menggunakan metode inferensi backward chaining untuk mendiagnosis penyakit sakit kepala berdasarkan gejala yang dialami pasien. Berikut adalah penjelasan konsep-konsep yang digunakan dalam program tersebut:
 1.	Aturan sistem pakar
-Sistem pakar memanfaatkan aturan-aturan yang sudah didefinisikan sebelumnya untuk mendiagnosis penyakit. Dalam program ini, aturan-aturan tersebut didefinisikan dalam bentuk kamus Python, dengan setiap penyakit memiliki satu atau lebih aturan yang mengaitkan gejala-gejala dengan penyakit tersebut.
+Sistem pakar memanfaatkan aturan-aturan yang sudah didefinisikan sebelumnya untuk mendiagnosis penyakit. Dalam program ini, aturan-aturan tersebut didefinisikan dalam bentuk kamus Map Javascript, dengan setiap penyakit memiliki satu atau lebih aturan yang mengaitkan gejala-gejala dengan penyakit tersebut.
 
 2.	Gejala-gejala yang dialami pasien
-Gejala-gejala yang dialami pasien didefinisikan dalam bentuk daftar Python. Daftar ini kemudian digunakan oleh sistem pakar untuk mencocokkan gejala-gejala yang dialami pasien dengan aturan-aturan yang sudah didefinisikan sebelumnya. Contoh :
+Gejala-gejala yang dialami pasien didefinisikan dalam bentuk daftar Map Javascript. Daftar ini kemudian digunakan oleh sistem pakar untuk mencocokkan gejala-gejala yang dialami pasien dengan aturan-aturan yang sudah didefinisikan sebelumnya. Contoh :
 • 1, Rasa nyeri terus menerus pada kedua sisi kepala
   2, Terasa tekanan di belakang mata
   3, Otot leher yang tegang
