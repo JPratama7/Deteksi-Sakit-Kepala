@@ -33,10 +33,13 @@ function arraysEqual(a, b) {
     return true;
 }
 function checkSymptom(listSymptom) {
-  if (listSymptom.length < 5) {
+
+  if (listSymptom.length === 0) {
+    return "Kamu belum memilih gejala apa pun.";
+  } else if (listSymptom.length < 5) {
     return "Kamu  mengalami gejala sakit kepala namun belum bisa ditentukan ";
   }
-
+ 
   const hasMigrain = listSymptom.filter(symptom => MigrainSymptom.includes(symptom)).length === 5;
   const hasTensionHeadache = listSymptom.filter(symptom => TensionHeadacheSymptom.includes(symptom)).length === 5;
   const hasClusterHeadache = listSymptom.filter(symptom => ClusterHeadacheSymptom.includes(symptom)).length === 5;
