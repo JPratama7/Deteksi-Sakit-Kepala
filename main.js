@@ -33,22 +33,30 @@ function arraysEqual(a, b) {
     return true;
 }
 function checkSymptom(listSymptom) {
-  if (listSymptom.length < 5) {
-    return "Kamu  mengalami gejala sakit kepala namun belum bisa ditentukan ";
+  if (listSymptom.length === 0) {
+    return "Kamu harus memilih setidaknya satu gejala.";
   }
+ 
+  listSymptom.sort((a, b) => a - b);
 
-  const hasMigrain = listSymptom.filter(symptom => MigrainSymptom.includes(symptom)).length === 5;
-  const hasTensionHeadache = listSymptom.filter(symptom => TensionHeadacheSymptom.includes(symptom)).length === 5;
-  const hasClusterHeadache = listSymptom.filter(symptom => ClusterHeadacheSymptom.includes(symptom)).length === 5;
-
-  if (hasMigrain && !hasTensionHeadache && !hasClusterHeadache) {
+  if (
+    arraysEqual(listSymptom, MigrainSymptom) &&
+    arraysEqual(listSymptom, TensionHeadacheSymptom) &&
+    arraysEqual(listSymptom, ClusterHeadacheSymptom)
+  ) {
+    return "Kamu mengalami Sakit Kepala dengan Jenis Migrain, Sakit Kepala Tegang, dan Sakit Kepala Cluster";
+  } else if (arraysEqual(listSymptom, MigrainSymptom) && arraysEqual(listSymptom, TensionHeadacheSymptom)) {
+    return "Kamu mengalami Sakit Kepala dengan Jenis Migrain dan Sakit Kepala Tegang";
+  } else if (arraysEqual(listSymptom, MigrainSymptom)) {
     return "Kamu mengalami Sakit Kepala dengan Jenis Migrain";
-  } else if (!hasMigrain && hasTensionHeadache && !hasClusterHeadache) {
-    return "Kamu mengalami Sakit Kepala dengan jenis Sakit Kepala Tegang";
-  } else if (!hasMigrain && !hasTensionHeadache && hasClusterHeadache) {
-    return "Kamu mengalami Sakit Kepala dengan jenis Sakit Kepala Cluster";
+  } else if (arraysEqual(listSymptom, TensionHeadacheSymptom) && arraysEqual(listSymptom, ClusterHeadacheSymptom)) {
+    return "Kamu mengalami Sakit Kepala dengan Jenis Sakit Kepala Tegang dan Sakit Kepala Cluster";
+  } else if (arraysEqual(listSymptom, TensionHeadacheSymptom)) {
+    return "Kamu mengalami Sakit Kepala dengan Jenis Sakit Kepala Tegang";
+  } else if (arraysEqual(listSymptom, ClusterHeadacheSymptom)) {
+    return "Kamu mengalami Sakit Kepala dengan Jenis Sakit Kepala Cluster";
   } else {
-    return "Kamu tidak mengalami gejala sakit kepala";
+    return "Kamu mengalami gejala sakit kepala, namun belum bisa ditentukan jenisnya.";
   }
 }
 
