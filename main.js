@@ -36,7 +36,7 @@ function checkSymptom(listSymptom) {
   if (listSymptom.length === 0) {
     return "Kamu harus memilih setidaknya satu gejala.";
   }
-
+ 
   listSymptom.sort((a, b) => a - b);
 
   if (
