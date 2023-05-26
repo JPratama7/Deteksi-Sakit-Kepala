@@ -1,6 +1,6 @@
-# Deteksi-Sakit-Kepala-Backward-Chaining
+# Deteksi-Sakit-Kepala-Forward-Chaining
 Sistem Pakar untuk mendiagnosis penyakit sakit kepala
-sistem pakar yang menggunakan metode inferensi backward chaining untuk mendiagnosis penyakit sakit kepala berdasarkan gejala yang dialami pasien. Berikut adalah penjelasan konsep-konsep yang digunakan dalam program tersebut:
+sistem pakar yang menggunakan metode inferensi forward chaining untuk mendiagnosis penyakit sakit kepala berdasarkan gejala yang dialami pasien. Berikut adalah penjelasan konsep-konsep yang digunakan dalam program tersebut:
 1.	Aturan sistem pakar
 Sistem pakar memanfaatkan aturan-aturan yang sudah didefinisikan sebelumnya untuk mendiagnosis penyakit. Dalam program ini, aturan-aturan tersebut didefinisikan dalam bentuk kamus Map Javascript, dengan setiap penyakit memiliki satu atau lebih aturan yang mengaitkan gejala-gejala dengan penyakit tersebut.
 
@@ -22,8 +22,8 @@ Gejala-gejala yang dialami pasien didefinisikan dalam bentuk daftar Map Javascri
   14, Hidung tersumbat
   15, Mata berair
 
-3.	Metode inferensi backward chaining
-Sistem pakar menggunakan metode inferensi backward chaining untuk mencari penyakit yang mungkin dialami pasien berdasarkan gejala-gejala yang dialami. Metode inferensi ini bekerja dengan cara memulai dari hipotesis akhir (yaitu penyakit yang ingin didiagnosis) dan mencari fakta-fakta yang dapat mendukung hipotesis tersebut, hingga didapatkan gejala-gejala yang dialami pasien. Dalam program ini, metode inferensi backward chaining dilakukan dengan fungsi backward_chaining.
+3.	Metode inferensi forward chaining
+Sistem pakar menggunakan metode inferensi forward chaining untuk mencari penyakit yang mungkin dialami pasien berdasarkan gejala-gejala yang dialami. Metode inferensi ini bekerja dengan cara memulai dari hipotesis akhir (yaitu penyakit yang ingin didiagnosis) dan mencari fakta-fakta yang dapat mendukung hipotesis tersebut, hingga didapatkan gejala-gejala yang dialami pasien. Dalam program ini, metode inferensi forward chaining dilakukan dengan fungsi forward_chaining.
 
 4.	Hasil diagnosis
 Setelah mencocokkan gejala-gejala yang dialami pasien dengan aturan-aturan yang sudah didefinisikan, sistem pakar akan memberikan diagnosis yang paling sesuai dengan gejala-gejala yang dialami pasien. Dalam program ini, diagnosis diberikan dalam bentuk teks yang ditampilkan di layar.
